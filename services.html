@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Portfolio Website</title> 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;  
+            text-decoration: none;
+            border: none;
+            outline: none;
+            font-family: 'Poppins', sans-serif;
+        }
+        html {
+            font-size: 62.5%;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            overflow-x: hidden;
+            background-color: black;
+            color: white;
+        }
+        header {
+            margin-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 9%;
+            background-color: transparent;
+            filter: drop-shadow(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 3rem;
+            color: #b74b4b;
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.5s ease;
+            left: 30px; 
+        }
+        .logo:hover {
+            transform: scale(1.1);
+        }
+        nav a {
+            font-size: 1.8rem;
+            color: white;
+            margin-left: 4rem;
+            font-weight: 500;
+            transition: 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        nav a:hover,
+        nav a.active {
+            color: #b74b4b;
+            border-bottom: 3px solid #b74b4b;
+        }
+        @media(max-width:995px) {
+            nav {
+                position: absolute;
+                display: none;
+                top: 0;
+                right: 0;
+                width: 40%;
+                border-left: 3px solid #b74b4b;
+                border-bottom: 3px solid #b74b4b;
+                border-bottom-left-radius: 2rem;
+                padding: 1rem solid;
+                background-color: #161616;
+                border-top: 0.1rem solid rgba(0,0,0,0.1);
+            }
+            nav.active {
+                display: block;
+            }
+            nav a {
+                display: block;
+                font-size: 2rem;
+                margin: 3rem 0;
+            }
+            nav a:hover,
+            nav a.active {
+                padding: 1rem;
+                border-radius: 0.5rem;
+                border-bottom: 0.5rem solid #b74b4b;
+            }
+        }
+        .wrapper{
+    font-family: 'poppins',sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: transparent;
+    margin-top: 6%;
+}
+.wrapper h1{
+    font-size: 3rem;
+    margin: 25px;
+    color: #b74b4b;
+}
+.content-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin-top: 30px;
+}
+.card{
+    min-height: 220px;
+    width: 320px;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: black;
+    margin: 10px 4px;
+    border: 2px #b74b4b;
+    box-shadow: 0px 15px 30px #b74b4b;
+}
+.card i{
+    margin: 20px;
+    color: #b74b4b;
+}
+.card h2{
+    margin-bottom: 12px;
+    font-weight: 400;
+    text-align: center;
+}
+.card p{
+    color: #6c757d;
+    text-align: center;
+}
+.card:hover i,
+.card:hover p{
+    color: #fff;
+}
+.card:hover h2{
+    font-weight: 600;
+}
+.card:nth-child(1):hover{
+    background: linear-gradient(45deg,
+  rgba(159, 70, 70, 0.7) 0% ,
+  rgba(199, 113, 113, 0.7)100% ) ,
+   url('bg.jpg');
+   background-size: cover;
+}
+.card:nth-child(2):hover{
+    background: linear-gradient(45deg,
+  rgba(159, 70, 70, 0.7) 0% ,
+  rgba(199, 113, 113, 0.7)100%) ,
+   url('bg2.jpg');
+   background-size: cover;
+}
+.card:nth-child(3):hover{
+    background: linear-gradient(45deg,
+ rgba(159, 70, 70, 0.7) 0% ,
+ rgba(199, 113, 113, 0.7)100% ) ,
+  url('bg3.jpg');
+  background-size: cover;
+}
+.card:nth-child(4):hover{
+    background: linear-gradient(45deg,
+ rgba(159, 77, 70, 0.7) 0% ,
+ rgba(199, 113, 113, 0.7)100% ) ,
+  url('bg4.jpg');
+  background-size: cover;
+}
+.card:nth-child(5):hover{
+    background: linear-gradient(45deg,
+ rgba(159, 70, 70, 0.7) 0% ,
+ rgba(199, 113, 113, 0.7)100% ) ,
+  url('bg5.jpg');
+  background-size: cover;
+}
+.card:nth-child(6):hover{
+    background: linear-gradient(45deg,
+ rgba(159, 70, 70, 0.7) 0% ,
+ rgba(199, 113, 113, 0.7)100% ) ,
+  url('bg2.jpg');
+ background-size: cover;
+}
+@media(max-width:991px){
+    .wrapper{
+        padding: 25px;
+    }
+    .wrapper h1{
+        font-size: 2.5em;
+        font-weight: 600;
+    }
+    .content-box{
+        flex-direction: column;
+        width: 100%;
+    }
+    .card{
+        min-width: 300px;
+        margin: 10px auto;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Arpeet Padhy</a>
+        <nav>
+            <a href="portfolio.html" class="active"> Home</a>
+            <a href="experinces.html">Experience</a>
+            <a href="skill.html">Skills</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <h1>Our Services</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Esse amet illo eos eligendi nobis nam aspernatur 
+             placeat.</p>
+             <div class="content-box">
+                <div class="card">
+                    <i class="bx bx-bar-chart-alt bx-md"></i>
+                    <h2>Graphic Designing</h2>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, maxime? </p>
+    
+                </div>
+                <div class="card">
+                    <i class="bx bx-laptop bx-md"></i>
+                    <h2>Website Development</h2>
+                   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, aspernatur!</p>
+                         
+                </div>
+                <div class="card">
+                    <i class='bx bx-user bx-md'></i>
+    
+                    <h2>Frontend</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, atque.</p>
+                         
+                </div>
+                <div class="card">
+                    <i class="bx bx-mail-send bx-md"></i>
+                    <h2>UI/UX Design</h2>
+                    <p> Iure ad fuga, voluptas nisi odit blanditiis aut culpa quasi. Expedita deleniti molestias hic
+                        numquam delectus!</p>
+                         
+                </div>
+                <div class="card">
+                    <i class="bx bx-bar-chart-alt bx-md"></i>
+                    <h2>Full Stack Development</h2>
+                    <p> Iure ad fuga, voluptas nisi odit blanditiis aut culpa quasi. Expedita deleniti molestias hic
+                        numquam delectus!</p>
+                         
+                </div>
+                <div class="card">
+                    <i class="bx bx-paint bx-md"></i>
+                    <h2>Video Editing</h2>
+                    <p> Iure ad fuga, voluptas nisi odit blanditiis aut culpa quasi. Expedita deleniti molestias hic
+                        numquam delectus!</p>
+                         
+                </div>
+             </div>
+    </div>
+</body>
+</html>
